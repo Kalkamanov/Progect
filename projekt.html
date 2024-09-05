@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HTML5 и CSS3 сайт</title>
+  <link rel="stylesheet" href="n.css">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <p>BANKAY</p>
+      <span>KOMANDA</span>
+    </div>
+    <div id="about">
+      <a href="#" title="Возможности" onclick="slowScroll('#main')">Мүмкіндіктері</a>
+      <a href="#" onclick="slowScroll('#overview')" title="Преимущества">Артықшылықтары</a>
+      <a href="#" onclick="slowScroll('#contacts')" title="Контакты">Контакты</a>
+      <a href="#" onclick="slowScroll('#faq')" title="Ответы на вопросы">FAQ</a>
+    </div>
+  </header>
+
+  <div id="top">
+    <h1>Командаға қош келдіңіз!!</h1>
+    <h3>Қазақша аниме дубляж</h3>
+  </div>
+
+  <div id="main">
+    <div class="intro">
+      <h2>Сізге қойылатын талаптар!</h2>
+      <span>Осы айтылған талаптарға сай болсаңыз астыңғы бөлімге өтіңіз</span>
+    </div>
+    <div class="text">
+    <ol>
+        <li>Қазақ тілін жақсы білуі керек</li>
+        <li>Айтидан хабары болу керек</li>
+        <li>Ағылшын Орыс тілдерін білуі керек</li>
+        <li>Дикция таза болуы</li>
+        <li>Командамен жұмыс істей алуы</li>
+        <li>Командамен соңына дейін болуы</li>
+    </ol>
+    </div>
+  </div>
+
+  <div id="overview">
+    <h2>Бізге керек команда мүшелері</h2>
+    <h4>Маңызды рөл атқаратын</h4>
+
+    <div class="img">
+      <img src="https://www.notik.ru/content/img/1590125432_01-laptop-for-coding.jpg" alt="">
+      <span>Сайт жасай алатын</span>
+    </div>
+    <div class="img">
+      <img src="https://strategyjournal.ru/wp-content/uploads/2023/09/mikrofon1-1024x682.jpg" alt="">
+      <span>Дубляжбен айналысатын адам</span>
+    </div>
+  </div>
+
+  <div id="contacts">
+    <center><h5>Кері байланыс</h5></center>
+    <form id="form_input">
+      <label for="name">Есіміңіз <span>*</span></label><br>
+      <input type="text" placeholder="Есіміңізді енгізіңіз" name="name" id="name"><br>
+      <label for="email">Сіздің почтаңыз <span>*</span></label><br>
+			<input type="email" placeholder="почтаңызды енгізіңіз" name="email" id="email"><br>
+			<label for="message">Хабарлама <span>*</span></label><br>
+			<textarea placeholder="Хабарламаңызды енгізіңіз" name="message" id="message"></textarea><br>
+			<div id="mess_send" class="btn">Жіберу</div>
+    </form>
+  </div>
+
+  <div id="faq">
+    <div>
+      <span class="title">Мүмкіндіктері</span><br>
+      <span class="heading">Біз сізге қандай мүмкіндіктер бере аламыз?</span>
+      <p>
+        <ol>
+            <li>Өзіңізді сынап көруге мүмкіндіктер бере аламыз</li>
+            <li>Тәжірибе жинау</li>
+            <li>Жеке даму</li>
+            <li>Ортамен тіл табысып үйрену</li>
+            <li>Командамен бірігіп жұмыс жасауды</li>
+            <li>Өзіңіздің идеяларыңызды командамен талқылай аласыз</li>
+            <li>Өзіңізді басқа қырынан байқап көруге болады</li>
+        </ol>
+      </p>
+    </div>
+    <div>
+      <span class="title">Артықшылықтары</span><br>
+      <span class="heading">Командамен жұмыс жасаудың артықшылықтары</span>
+      <p>
+        <ol>
+            <li>Бір-бірімен жақсы араласу</li>
+            <li>Бір-бірімен сыйласу</li>
+            <li>Уақытты үнемдеу</li>
+            <li>Командамен бірге даму</li>
+            <li>Тапсырманың жылдам орындалуы</li>
+            <li>Ортақ мақсатқа жету үшін бірігіп жұмыс жасау</li>
+        </ol>
+      </p>
+    </div>
+    <div>
+      <span class="title">Байланысу үшін</span><br>
+      <span class="heading">Телеграм</span>
+      <p>@fhfgdsj</p>
+      <p>@fhfgdsj</p>
+      <span class="heading">Инстагарм</span>
+      <p>Djncdbhgd.kz</p>
+      <p>Djncdbhgd.kz</p>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+</body>
+</html>
